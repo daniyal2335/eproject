@@ -24,9 +24,9 @@ if(isset($_GET['lpid'])){
                         <h3 class="text-white mb-4 mt-4">Experience: <?php echo $plaw['experience']?> Years</h3>
 </div>
                         <div class="col-lg-12">
-                        <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium? Repudiandae iste voluptatem fugiat doloribus quasi quo iure officia.
+                        <p class="text-white mb-4">Lawyers typically do the following: Advise and represent clients in criminal or civil proceedings and in other legal matters.
                         </p>
-                        <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium? Repudiandae iste voluptatem fugiat doloribus quasi quo iure officia.
+                        <p class="text-white mb-4">Communicate with clients, colleagues, judges, and others involved in a case. Conduct research and analysis of legal issues.
                         </p>
                     </div>
                     <div class="col-lg-12">

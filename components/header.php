@@ -114,8 +114,7 @@ include('adminpanel/php/query.php');
                         <a href="index.php" class="nav-item nav-link active">Home</a>
                         <a href="about.php" class="nav-item nav-link">About</a>
                         <a href="services.php" class="nav-item nav-link">Services</a>
-                        <a href="login.php" class="nav-item nav-link">Login</a>
-                        <a href="signup.php" class="nav-item nav-link">Register</a>
+                       
                     </div>
                     <a href="#bookApp" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
                 </div>

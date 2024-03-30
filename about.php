@@ -15,7 +15,7 @@ include('components/subheader.php');
                         <h5 class="section-about-title pe-3">About Us</h5>
                         <h1 class="mb-4">Welcome to <span class="text-primary">Laws</span></h1>
                         <p class="mb-4">The civil litigation regulates the disputes between private individuals or the business entities. The civil law deals with the matters like property, contracts, succession or inheritance, corporate matters, business and financial litigation, personal injuries or family matters etc…., when you are</p>
-                        <p class="mb-4">an aggrieved party in a lawsuit you will definitely need a civil lawyer to present your case in the court of law. Even if you are not an aggrieved party, a competent and professional civil lawyer may help you in your business or if you are creating a contract, mortgage, transfer of property, title, deeds or a lease, a civil lawyer may advise you, your legal rights and obligations<</p>
+                        <p class="mb-4">the aggrieved party in a lawsuit you will definitely need a civil lawyer to present your case in the court of law. Even if you are not an aggrieved party, a competent and professional civil lawyer may help you in your business or if you are creating a contract, mortgage, transfer of property, title, deeds or a lease, a civil lawyer may advise you, your legal rights and obligations<</p>
                     </div>
                 </div>
             </div>

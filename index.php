@@ -90,7 +90,7 @@ include('components/header.php');
                     </div>
                     <div class="col-lg-6">
                         <h1 class="text-white mb-3">Book A Appointment</h1>
-                        <form method="post">
+                        <form method="post" id="vall">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -135,11 +135,11 @@ include('components/header.php');
                                 </div>
                                 
                                 <div class="form-floating col-md-6" id="City">
-                            <select class="form-select" name="aLocation" Required>
+                            <select class="form-select userCity" name="aLocation" Required>
                                 <option>Select City</option>
-                                <option value="karachi">Karachi</option>
-                                <option value="lahore">Lahore</option>
-                                <option value="islamabad">Islamabad</option>
+                                <option class="karachi" value="karachi">Karachi</option>
+                                <option class="lahore" value="lahore">Lahore</option>
+                                <option class="islamabad" value="islamabad">Islamabad</option>
                             </select>
                             <label for="City">Select City</label>
                             </div>
@@ -166,7 +166,7 @@ include('components/header.php');
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                     <select class="form-select bg-white border-0 userLawyers" id="SelectPerson" name="aLawyer" Required>
-                                        <option value="">Select Lawyers</option>                                           
+                                        <option value="">First Select Category and City</option>                                           
                                         </select>
                                         <label for="SelectPerson">Lawyers</label>
                                     </div>
@@ -335,15 +335,17 @@ include('components/header.php');
         });
 
 
-        // dependent dropdown
-        $(document).on('change','.userLaws',function(){
-        var cat_val = $(this).val();
-        if(cat_val){
+        // dependent dropdown Category And City
+        $(document).on('change','.userLaws, .userCity',function(){
+        var cat_val = $('.userLaws').val();
+        var cat_val1 = $('.userCity').val();
+        if(cat_val && cat_val1){
            $.ajax({
                    type:"POST",
                    url:'components/ajax.php',
                    data:{
-                       'cat_val' : cat_val
+                       'cat_val' : cat_val,
+                       'cat_val1' : cat_val1
                    },
                    success:function(res)
                     {
@@ -352,7 +354,6 @@ include('components/header.php');
                 });
                 }
         });
-
     });
 
         </script>

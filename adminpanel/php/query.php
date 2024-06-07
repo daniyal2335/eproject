@@ -13,6 +13,7 @@ if(isset($_POST['uLogin'])){
     $query->execute();
     $user=$query->fetch(PDO::FETCH_ASSOC);
    //print_r($user);
+   if($user){
     if($user['role_id'] == 1 && $user['status'] == 'active'){
         $_SESSION['adminName']=$user['name'];
         $_SESSION['adminEmail']=$user['email'];
@@ -40,8 +41,9 @@ if(isset($_POST['uLogin'])){
         location.assign('index.php')
         </script>"  ; 
     }  
-    else{
-        echo "<script>alert ('Invalid Useremail Or Password')</script>";
+}
+else{
+    echo "<script>alert ('invalid username or password');</script>";
 }
 }
 
@@ -326,7 +328,7 @@ if(isset($_POST['pBookApp'])){
 // search work
 if(isset($_POST['input'])){
     $val = $_POST['input'];
-    $query = $pdo->prepare("select lawspeci.*,category.specialization as cName,c_id as catId from lawspeci inner join category on lawspeci.c_id=category.id where name Like :val OR location like :loc OR category.specialization LIKE :ser
+    $query = $pdo->prepare("select lawspeci.*,category.specialization as cName,c_id as catId from lawspeci inner join category on lawspeci.c_id=category.id where lawspeci.status = 'active' AND name Like :val OR location like :loc OR category.specialization LIKE :ser
     ");
     $val ="%$val%";
     $query->bindParam('val',$val);
